@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+             Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Margin="0,50,0,0"
+            Padding="30,20"
+            Spacing="15">
+            
+            <Label
+                Text="BMI Calculator"
+                FontAttributes="Bold"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Text="Height (cm)"
+                FontAttributes="Bold" />
+            <Entry
+                x:Name="HeightEntry"
+                Placeholder="Enter height in cm"
+                Keyboard="Numeric"
+                SemanticProperties.Hint="Enter your height in centimeters" />
+
+            <Label
+                Text="Weight (kg)"
+                FontAttributes="Bold" />
+            <Entry
+                x:Name="WeightEntry"
+                Placeholder="Enter weight in kg"
+                Keyboard="Numeric"
+                SemanticProperties.Hint="Enter your weight in kilograms" />
+
+            <Button
+                x:Name="CalculateBtn"
+                FontAttributes="Bold"
+                Text="Calculate BMI"
+                Clicked="OnCalculateBMI"
+                HorizontalOptions="Fill" />
+
+            <Border
+                BackgroundColor="LightGray"
+                
+                Padding="15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20"></RoundRectangle>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="10">
+                    <Label
+                        x:Name="BmiResultLabel"
+                        Text="BMI: --"
+                        FontSize="18"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center" />
+                    
+                    <Label
+                        x:Name="BmiCategoryLabel"
+                        TextColor="Black"
+                        Text="Category: --"
+                        HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Border>
+            <Image
+                x:Name="BmiImage"
+                HorizontalOptions="Center"
+                Width="300"
+                HeightRequest="300"
+                Aspect="AspectFit"
+                IsAnimationPlaying="True" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
