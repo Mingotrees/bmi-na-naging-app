@@ -1,0 +1,33 @@
+# Build & Output Directories
+[Bb]in/
+[Oo]bj/
+artifacts/
+publish/
+
+# User-specific & IDE Settings
+.vs/
+.idea/
+.vscode/
+*.user
+*.userprefs
+*.suo
+
+# NuGet Packages
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+# MAUI/Xamarin Specific
+**/*.Droid/**/[Rr]esource.[Dd]esigner.cs
+**/*.Android/**/[Rr]esigner.cs
+*.apk
+*.aab
+*.app
+
+# Logs & Test Results
+*.log
+[Tt]est[Rr]esult*/
+
+# ReSharper/JetBrains
+_ReSharper*/
+*.DotSettings.user
